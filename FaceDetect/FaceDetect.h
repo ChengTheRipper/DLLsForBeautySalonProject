@@ -26,6 +26,7 @@ public:
 	virtual bool GetFace() = 0;
 	virtual void GetFrame() = 0;
 	virtual void Write2Disk() = 0;
+	virtual void ShowSrc() = 0;
 	virtual void Release() = 0;
 };
 
@@ -40,6 +41,7 @@ public:
 	bool GetFace();
 	void GetFrame();
 	void Write2Disk();
+	void ShowSrc();
 	void Release();
 private:
 	//三个区域分别的索引
@@ -103,4 +105,4 @@ private:
 
 
 //工厂函数，产生一个facedetect实例
-extern "C" FDAPI IFaceDetect * APIENTRY GetFD();
+extern "C" FDAPI IFaceDetect * GetFD();

@@ -39,19 +39,20 @@ FaceDetect::~FaceDetect()
 
 bool FaceDetect::StartGrab()
 {
-	cap_.open(1);
-	if (!cap_.isOpened())
+	for (int i = 0; i < 2; ++i)
 	{
-		cap_.open(0);
-		cout << "error cam open failed" << endl;
-		return false;
+		cap_.open(i);
+		if (cap_.isOpened())
+			return true;
 	}
-	return true;
+	cout << "no cam available" << endl;
+	return false;
 }
 
 void FaceDetect::GetFrame()
 {
 	cap_ >> src_;
+	cout << "get a frame" << endl;
 }
 
 bool FaceDetect::GetFace()
@@ -123,6 +124,14 @@ void FaceDetect::Write2Disk()
 		imwrite(cur_gender_ + string("0") + suffix, roi_face_all_);
 		imwrite(cur_gender_ + string("1") + suffix, roi_face_hair_);
 		imwrite(cur_gender_ + string("2") + suffix, roi_face_only_);
+	}
+}
+
+void FaceDetect::ShowSrc()
+{
+	if (!roi_face_all_.empty())
+	{
+		imshow("test", roi_face_hair_);
 	}
 }
 
