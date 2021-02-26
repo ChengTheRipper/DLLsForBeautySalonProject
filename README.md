@@ -6,7 +6,7 @@ DLLs
 
 经过研究发现，C#调用dll只需要调用将DLL放在和文件执行文件相同的地方就可，不需要再配置头文件，静态库之类的，比较方便
 
-![image-20210226105333620](C:\Users\AdamJ\AppData\Roaming\Typora\typora-user-images\image-20210226105333620.png)
+![image-20210226105333620](D:\CPP_Projects\BeautySalon\DLLs\image-20210226105333620.png)
 
 #### 模型文件和其他C++ DLL
 
