@@ -36,6 +36,9 @@
     <ClInclude Include="src\FaceProc\torch_lib_includes.h">
       <Filter>头文件\FaceProc</Filter>
     </ClInclude>
+    <ClInclude Include="src\FaceProc\PS_Mixer.h">
+      <Filter>头文件\FaceProc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -45,6 +48,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="FaceDetect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FaceProc\PS_Mixer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FaceProc\SimpleMath.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
